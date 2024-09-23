@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 
-
-const ownerSchema = mongoose.Schema({
-    fullname :{
+// Define the schema
+const ownerSchema = new mongoose.Schema({
+    fullname: {
         type: String,
-        minLength:3,
-        trim:true
+        minLength: 3,
+        trim: true
     },
-    email : String,
+    email: String,
     password: String,
-    pticture :String,
-    gstin:String
+    picture: String,
+    gstin: String
+});
 
-})
-
-module.exports = mongoose.model("owner","ownerSchema");
+// Create the model using the schema
+module.exports = mongoose.model('Owner', ownerSchema);
