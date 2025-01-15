@@ -23,6 +23,8 @@ module.exports.registerUser = async function(req,res)
                 fullname
             })
            let token = generateToken(user); 
+        //  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+
             // let token = jwt.sign({ email:req.body.email ,id:user._id}, 'shhhhh');
             res.cookie("token",token);
             res.redirect("/shop");

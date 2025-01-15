@@ -15,3 +15,5 @@ const ownerSchema = new mongoose.Schema({
 
 // Create the model using the schema
 module.exports = mongoose.model('Owner', ownerSchema);
+
+
